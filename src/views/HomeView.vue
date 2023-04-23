@@ -1,3 +1,3 @@
 <template>
-  home
+  <main id="container">home</main>
 </template>

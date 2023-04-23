@@ -1,0 +1,14 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  background: linear-gradient(91deg, rgba(33, 123, 154, 1) 0%, rgba(29, 185, 157, 1) 100%);
+}
