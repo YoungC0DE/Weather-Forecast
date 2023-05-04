@@ -1,14 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: 400ms;
+}
+
+input:focus,
+input:checked {
+  box-shadow: none;
+  outline-offset: 0px;
+  outline: none;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(33, 123, 154, 1) 0%, rgba(29, 185, 157, 1) 100%);
 }
 
 #container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   height: 100vh;
-  background: linear-gradient(91deg, rgba(33, 123, 154, 1) 0%, rgba(29, 185, 157, 1) 100%);
+  gap: 30px;
+  justify-content: center;
+}
+
+#container section {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.searchDiv {
+  background-color: white;
+  padding: 14px 0px;
+  border-radius: 4px;
+  width: 50%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchDiv form {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.searchDiv form i.customIcon {
+  border-radius: 4px 0px 0px 4px;
+  border: 1px solid #515970;
+  border-right: none;
+  color: #707689;
+  padding: 10px;
+}
+
+.searchDiv form input {
+  border-radius: 0px;
+  border: 1px solid #515970;
+  border-left: none;
+  border-right: none;
+  padding: 10px 0px;
+  width: 50%;
+}
+
+.searchDiv form button {
+  border-radius: 0px 4px 4px 0px;
+  border: 1px solid #515970;
+  background-color: #707689;
+  color: white;
+  border-left: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.searchDiv form button:hover {
+  background-color: #3f424d;
+}
+
+.weather-card {
+  background-color: white;
+  padding: 14px 0px;
+  width: 20%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0px;
+}
+
+.weather-card,
+.searchDiv {
+  box-shadow: 4px 4px 0px 0px rgb(97 101 114);
+  -webkit-box-shadow: 4px 4px 0px 0px rgb(97 101 114);
+  -moz-box-shadow: 4px 4px 0px 0px rgb(97 101 114);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
 }
