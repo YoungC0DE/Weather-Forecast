@@ -5,7 +5,7 @@
       <form>
         <i class="bi bi-geo-alt-fill customIcon"></i>
         <input type="text" v-model="search" placeholder="Ex: New York">
-        <button type="button" v-on:click="getWeather">Search <i class="bi bi-search"></i></button>
+        <button type="button" @click="getWeather">Search <i class="bi bi-search"></i></button>
       </form>
     </div>
     <section>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Swal from "sweetalert2";
+import Axios from "axios";
 
 export default {
   data() {
@@ -35,9 +35,19 @@ export default {
   },
   methods: {
     getWeather() {
-      if (this.search) {
+      if (!this.search) {
         return
       }
+
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.search}&appid=${import.meta.env.VITE_API_KEY}&lang=pt_br&units=metric`
+
+      Axios.get(url)
+        .then(({data}) => {
+          console.log(data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   }
 }

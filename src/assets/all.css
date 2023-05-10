@@ -102,9 +102,9 @@ body {
 
 .weather-card,
 .searchDiv {
-  box-shadow: 4px 4px 0px 0px rgb(97 101 114);
-  -webkit-box-shadow: 4px 4px 0px 0px rgb(97 101 114);
-  -moz-box-shadow: 4px 4px 0px 0px rgb(97 101 114);
+  box-shadow: 4px 4px 0px 0px rgb(97 101 114 / 50%);
+  -webkit-box-shadow: 4px 4px 0px 0px rgb(97 101 114 / 50%);
+  -moz-box-shadow: 4px 4px 0px 0px rgb(97 101 114 / 50%);
 }
 
 footer {
