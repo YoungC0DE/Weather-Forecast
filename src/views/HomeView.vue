@@ -9,7 +9,7 @@
       </form>
     </div>
     <section>
-      <div class="weather-card" v-for="(i, id) in 3" :key="id">
+      <div class="weather-card" v-for="(i, id) in 5" :key="id">
         <h2>Embu das Artes - SP</h2>
         <span>23º C</span>
         <hr>
@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import Axios from "axios";
+import axios from "axios";
 
 export default {
   data() {
     return {
       search: '',
-      apiResult: {}
+      apiResult: {},
     }
   },
   methods: {
@@ -41,14 +41,32 @@ export default {
 
       const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.search}&appid=${import.meta.env.VITE_API_KEY}&lang=pt_br&units=metric`
 
-      Axios.get(url)
-        .then(({data}) => {
+      axios.get(url)
+        .then(({ data }) => {
           console.log(data)
         })
         .catch((err) => {
           console.log(err)
         })
+    },
+    loadDataByUserLocation() {
+      var that = this
+
+      window.navigator.geolocation.getCurrentPosition(({ coords }) => {
+        const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${coords.latitude}&lon=${coords.longitude}&appid=${import.meta.env.VITE_API_KEY}&lang=pt_br&units=metric`
+
+        axios.get(url)
+          .then(({ data }) => {
+            console.log(data)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      }, () => { console.log('erro') })
     }
+  },
+  mounted() {
+    //this.loadDataByUserLocation()
   }
 }
 </script>
