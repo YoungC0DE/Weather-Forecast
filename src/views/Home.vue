@@ -9,7 +9,7 @@
       </form>
     </div>
     <section>
-      <div class="weather-card" v-if="result.list.length == 0">Sem resultado</div>
+      <div class="weather-card p-5" v-if="result.list.length == 0">No results</div>
       <div id="carouselExample" class="carousel slide w-50 d-flex flex-column align-items-center" v-else>
         <div class="carousel-inner w-75 p-2">
           <div class="weather-card carousel-item" :class="index == 0 ? 'active' : ''" v-for="(item, index) in result.list" :key="index">
@@ -57,7 +57,7 @@ export default {
       params: {
         search: '',
         units: 'metric',
-        lang: 'pt_br'
+        lang: 'en'
       }
     }
   },
