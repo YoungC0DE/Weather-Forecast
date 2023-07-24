@@ -94,13 +94,14 @@ body {
 .weather-card {
   background-color: white;
   padding: 14px 10px;
-  width: 250px;
-  height: 300px;
+  border-radius: 10px 0px;
+}
+
+.weather-card .content {
   display: flex;
   text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
-  border-radius: 10px 0px;
 }
 
 .weather-card,
@@ -129,6 +130,9 @@ footer a {
     min-width: 0px;
     width: 90%;
   }
+  .carousel.slide {
+    width: 100% !important;
+  } 
   #container {
     height: 100%;
     margin: 10% 0px;
