@@ -2,11 +2,11 @@
   <main id="container">
     <div class="searchDiv">
       <h1>{{ app_title }}</h1>
-      <form>
+      <div class="form">
         <i class="bi bi-geo-alt-fill customIcon"></i>
-        <input type="text" v-model="params.search" :placeholder="search_placeholder">
-        <button type="button" @click.prevent="getWeather" @keypress.prevent.enter="getWeather">Search <i class="bi bi-search"></i></button>
-      </form>
+        <input type="text" v-model="params.search" :placeholder="search_placeholder" @keypress.enter="getWeather">
+        <button type="button" @click="getWeather">Search <i class="bi bi-search"></i></button>
+      </div>
     </div>
     <section>
       <div class="weather-card p-5" v-if="result.list.length == 0">No results</div>
