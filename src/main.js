@@ -14,3 +14,9 @@ const app = createApp(App);
 app.use(ToastPlugin);
 app.use(router);
 app.mount('#app');
+
+
+window.addEventListener('load', () => {
+    const titlePage = document.querySelector('head title');
+    titlePage.innerHTML = import.meta.env.VITE_APP_NAME;
+})
