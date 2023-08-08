@@ -54,6 +54,9 @@ export default {
                 .catch((err) => {
                     that.$toast.error(err);
                 })
+                .finally(() => {
+                    that.params.search = '';
+                })
         },
     },
 }
