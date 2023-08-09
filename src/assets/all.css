@@ -22,11 +22,11 @@ body {
 #container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   width: 30%;
   gap: 30px;
-  justify-content: center;
 }
 
 #container section {
@@ -129,18 +129,7 @@ footer a {
 }
 
 @media (max-width: 600px) {
-  .searchDiv, .weather-card {
-    min-width: 0px;
-    width: 90%;
-  }
-  .carousel.slide {
-    width: 100% !important;
-  } 
   #container {
-    height: 100%;
-    margin: 10% 0px;
-  }
-  #container section {
-    height: 450px;
+    width: 95%;
   }
 }
