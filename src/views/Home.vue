@@ -8,13 +8,13 @@
           <div class="weather-card carousel-item" :class="index == 0 ? 'active' : ''" v-for="(item, index) in result.list" :key="index">
             <div class="content">
               <span> {{ getDate(item.dt_txt) }} </span>
-              <h2>{{ item.main.temp }} ºC</h2>
+              <h2>{{ parseInt(item.main.temp) }} ºC</h2>
               <small>Population: {{ result.city.population }}</small>
               <hr>
               <div class="d-flex flex-column align-items-center">
                 <span><i class="bi bi-clock"></i> {{ getTime(item.dt_txt) }} Horas</span>
                 <img :src="'https://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'" style="width: 100px;">
-                <small>{{ item.weather[0].description }}</small>
+                <p>{{ item.weather[0].description }}</p>
               </div>
             </div>
           </div>
