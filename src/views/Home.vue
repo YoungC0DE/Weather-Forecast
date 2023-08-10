@@ -14,7 +14,7 @@
               <div class="d-flex flex-column align-items-center">
                 <span><i class="bi bi-clock"></i> {{ getTime(item.dt_txt) }} Horas</span>
                 <img :src="'https://openweathermap.org/img/wn/' + item.weather[0].icon + '@2x.png'" style="width: 100px;">
-                <p>{{ item.weather[0].description }}</p>
+                <p class="m-0"><i>{{ item.weather[0].description }}</i></p>
               </div>
             </div>
           </div>
